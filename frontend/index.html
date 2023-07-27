@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sistema Bancario</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <h1>Sistema Bancario</h1>
+
+  <h2>Clientes</h2>
+  <table class="table">
+    <tr>
+      <th>ID Cliente</th>
+      <th>Nombre</th>
+      <th>Dirección</th>
+      <th>Teléfono</th>
+      <th>Acciones</th>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>Juan Pérez</td>
+      <td>Calle 123, XYZ</td>
+      <td>555-1234567</td>
+      <td>
+        <button class="btn btn-primary">Editar</button>
+        <button class="btn btn-danger">Eliminar</button>
+      </td>
+    </tr>
+    <!-- Filas adicionales para más clientes -->
+  </table>
+
+  <div class="button-container">
+    <button class="btn btn-success">Agregar Cliente</button>
+  </div>
+
+  <h2>Cuentas</h2>
+  <table class="table">
+    <tr>
+      <th>ID Cuenta</th>
+      <th>ID Cliente</th>
+      <th>Tipo de Cuenta</th>
+      <th>Saldo</th>
+      <th>Acciones</th>
+    </tr>
+    <tr>
+      <td>101</td>
+      <td>1</td>
+      <td>Ahorros</td>
+      <td>$1000.00</td>
+      <td>
+        <button class="btn btn-primary">Editar</button>
+        <button class="btn btn-danger">Eliminar</button>
+      </td>
+    </tr>
+    <!-- Filas adicionales para más cuentas -->
+  </table>
+
+  <div class="button-container">
+    <button class="btn btn-success">Agregar Cuenta</button>
+  </div>
+
+  <h2>Movimientos</h2>
+  <table class="table">
+    <tr>
+      <th>ID Movimiento</th>
+      <th>ID Cuenta</th>
+      <th>Tipo de Movimiento</th>
+      <th>Monto</th>
+      <th>Acciones</th>
+    </tr>
+    <tr>
+      <td>201</td>
+      <td>101</td>
+      <td>Depósito</td>
+      <td>$200.00</td>
+      <td>
+        <button class="btn btn-primary">Editar</button>
+        <button class="btn btn-danger">Eliminar</button>
+      </td>
+    </tr>
+    <!-- Filas adicionales para más movimientos -->
+  </table>
+
+  <div class="button-container">
+    <button class="btn btn-success">Agregar Movimiento</button>
+  </div>
+</body>
+</html>

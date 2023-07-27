@@ -1,0 +1,30 @@
+
+<h2>Clientes</h2>
+<table class="table">
+  <tr>
+    <th>ID Cliente</th>
+    <th>Nombre</th>
+    <th>Dirección</th>
+    <th>Teléfono</th>
+    <th>Acciones</th>
+  </tr>
+  {{#each datosCliente}}
+  <tr>
+    <td>{{this.id_cliente}}</td>
+    <td>{{this.nombre}}</td>
+    <td>{{this.direccion}}</td>
+    <td>{{this.telefono}}</td>
+   
+    <td>
+      <a href="/clientes/edit/{{id_cliente}}" class="btn btn-primary">Editar</a>
+      <a href="/clientes/delete/{{id_cliente}}" class="btn btn-danger">Eliminar</a>
+      <a href="/clientes/cuenta/{{this.id_cliente}}/profile">Cuentas</a>
+
+    </td>
+  </tr>
+  {{/each}}
+</table>
+
+<div class="button-container">
+  <a   href="/clientes/form"  class="btn btn-success">Agregar Cliente</a>
+</div>

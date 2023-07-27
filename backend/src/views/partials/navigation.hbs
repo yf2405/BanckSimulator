@@ -1,0 +1,38 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="/">Mi BANCO</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      {{#if user}}
+
+      <li class="nav-item">
+        <a class="nav-link" href="/clientes">Clientes</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/cuentas">Cuentas</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/movimientos">Movimientos</a>
+      </li>
+      </li>
+       <li class="nav-item">
+        <a class="nav-link" href="/logout">Logout </a>
+      </li>
+   
+      <li class="nav-item">
+        <a href="/profile" class="nav-link">Profile</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/login">Inicio de Sesión</a>
+         {{else}}
+         <li class="nav-item">
+        <a href="/profile" class="nav-link">Profile</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/login">Inicio de Sesión</a>
+         {{/if}}
+    </ul>
+  </div>
+</nav>

@@ -1,0 +1,20 @@
+<h2>Editar Movimiento</h2>
+<form action="/movimientos/edit/{{movimiento.id_movimiento}}" method="POST">
+  <div class="mb-3">
+    <label for="movimientoId" class="form-label">ID Movimiento</label>
+    <input type="text" class="form-control" id="movimientoId" name="movimientoId" value="{{movimiento.id_movimiento}}" readonly>
+  </div>
+  <div class="mb-3">
+    <label for="movimientoCuenta" class="form-label">ID Cuenta</label>
+    <input type="text" class="form-control" id="movimientoCuenta" name="movimientoCuenta" value="{{movimiento.id_cuenta}}" required>
+  </div>
+  <div class="mb-3">
+    <label for="movimientoTipo" class="form-label">Tipo de Movimiento</label>
+    <input type="text" class="form-control" id="movimientoTipo" name="movimientoTipo" value="{{movimiento.tipo_movimiento}}" required>
+  </div>
+  <div class="mb-3">
+    <label for="movimientoMonto" class="form-label">Monto</label>
+    <input type="text" class="form-control" id="movimientoMonto" name="movimientoMonto" value="{{movimiento.monto}}" required>
+  </div>
+  <button type="submit" class="btn btn-primary">Guardar cambios</button>
+</form>

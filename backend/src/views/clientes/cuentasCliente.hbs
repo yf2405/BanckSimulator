@@ -1,0 +1,31 @@
+<h2>Cuentas</h2>
+<table class="table">
+  <tr>
+    <th>ID Cuenta</th>
+    <th>ID Cliente</th>
+    <th>Tipo de Cuenta</th>
+    <th>Saldo</th>
+    <th>Acciones</th>
+  </tr>
+  {{#each cuentas}}
+  <tr>
+    <td>{{this.id_cuenta}}</td>
+   <td><a href="/cuentas/clientes/{{this.id_cliente}}/profile">{{this.id_cliente}}</a></td>
+    <td>{{this.tipo_cuenta}}</td>
+    <td>{{this.saldo}}</td>
+    <td>
+      <a href="/cuentas/edit/{{this.id_cuenta}}" class="btn btn-primary">Editar</a>
+      <form action="/cuentas/delete/{{this.id_cuenta}}" method="POST">
+        <button type="submit" class="btn btn-danger">Eliminar</button>
+        <!-- Agrega un campo oculto para preguntar si desea eliminar también la base de datos -->
+        <input type="hidden" name="eliminarBD" value="true">
+      </form>
+    </td>
+  </tr>
+  {{/each}}
+</table>
+<div class="button-container">
+  <a href="/cuentas/agregar" class="btn btn-success">Agregar Cuenta</a>
+</div>
+
+ 

@@ -1,0 +1,30 @@
+<h2>Movimientos</h2>
+<table class="table">
+  <tr>
+    <th>ID Movimiento</th>
+    <th>ID Cuenta</th>
+    <th>Tipo de Movimiento</th>
+    <th>Monto</th>
+    <th>Acciones</th>
+  </tr>
+  {{#each movimientos}}
+  <tr>
+    <td>{{this.id_movimiento}}</td>
+    <td>{{this.id_cuenta}}</td>
+    <td>{{this.tipo_movimiento}}</td>
+    <td>{{this.monto}}</td>
+    <td>
+      <a href="/movimientos/edit/{{this.id_movimiento}}" class="btn btn-primary">Editar</a>
+      <form action="/movimientos/delete/{{this.id_movimiento}}" method="POST">
+        <button type="submit" class="btn btn-danger">Eliminar</button>
+        <!-- Agrega un campo oculto para preguntar si desea eliminar también la base de datos -->
+        <input type="hidden" name="eliminarBD" value="true">
+      </form>
+    </td>
+  </tr>
+  {{/each}}
+</table>
+
+<div class="button-container">
+  <a href="/movimientos/agregar" class="btn btn-success">Agregar Movimiento</a>
+</div>

@@ -1,0 +1,28 @@
+
+-- Creación de la tabla Clientes
+
+
+CREATE TABLE Clientes (
+  id_cliente INT PRIMARY KEY,
+  nombre VARCHAR(100),
+  direccion VARCHAR(100),
+  telefono VARCHAR(20)
+);
+
+-- Creación de la tabla Cuentas
+CREATE TABLE Cuentas (
+  id_cuenta INT PRIMARY KEY,
+  id_cliente INT,
+  tipo_cuenta VARCHAR(20),
+  saldo DECIMAL(10, 2),
+  FOREIGN KEY (id_cliente) REFERENCES Clientes(id_cliente)
+);
+
+-- Creación de la tabla Movimientos
+CREATE TABLE Movimientos (
+  id_movimiento INT PRIMARY KEY,
+  id_cuenta INT,
+  tipo_movimiento VARCHAR(20),
+  monto DECIMAL(10, 2),
+  FOREIGN KEY (id_cuenta) REFERENCES Cuentas(id_cuenta)
+);

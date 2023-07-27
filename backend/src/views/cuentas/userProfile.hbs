@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <!-- Información del usuario -->
+      <div class="card mb-3">
+        <img src="/img/User.png" class="card-img-top" style="width: 15rem; " alt="Imagen de usuario">
+        <div class="card-body">
+          <h5 class="card-title">Descripción del usuario</h5>
+         
+        </div>
+      </div>
+    </div>
+    <div class="col-md-8">
+      <!-- Perfil de usuario -->
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Información del perfil</h5>
+          <ul class="list-group">
+            <li class="list-group-item">Nombre: {{user.nombre}}</li>
+            <li class="list-group-item">DIR: {{user.direccion}}</li>
+            <li class="list-group-item">TEL: {{user.telefono}}</li>
+
+            <!-- Agrega más detalles del perfil aquí -->
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

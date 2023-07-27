@@ -1,0 +1,20 @@
+<h2>Agregar Movimiento</h2>
+<form action="/movimientos/agregar" method="POST">
+  <div class="mb-3">
+    <label for="movimientoId" class="form-label">ID Movimiento</label>
+    <input type="text" class="form-control" id="movimientoId" name="movimientoId" required>
+  </div>
+  <div class="mb-3">
+    <label for="movimientoCuenta" class="form-label">ID Cuenta</label>
+    <input type="text" class="form-control" id="movimientoCuenta" name="movimientoCuenta" required>
+  </div>
+  <div class="mb-3">
+    <label for="movimientoTipo" class="form-label">Tipo de Movimiento</label>
+    <input type="text" class="form-control" id="movimientoTipo" name="movimientoTipo" required>
+  </div>
+  <div class="mb-3">
+    <label for="movimientoMonto" class="form-label">Monto</label>
+    <input type="text" class="form-control" id="movimientoMonto" name="movimientoMonto" required>
+  </div>
+  <button type="submit" class="btn btn-primary">Agregar Movimiento</button>
+</form>
